@@ -331,24 +331,7 @@ internally to do its work.
 
 ---
 
-## 8. Exercises for students
-
-1. **Read the card.** Using only `curl`, find the endpoint URL and the skill examples. Then
-   send one of the example sentences.
-2. **Multi-turn by hand.** Send `"add 7"`, read the `input-required` response, then send a
-   follow-up with the right `taskId` and `contextId` so the task completes.
-3. **Break it.** Trigger each error code in section 4. Which errors are JSON-RPC errors and
-   which are A2A errors?
-4. **Add a skill.** Extend `server.py` with a `multiply` skill: add it to the Agent Card and
-   choose between add and multiply based on the words in the message.
-5. **Add `tasks/cancel`.** Add a method that sets a task's state to `canceled`. Return error
-   `-32002` (TaskNotCancelable) if the task is already `completed`.
-6. **Agent chain.** Write a third agent that receives a message, forwards it to the Calculator
-   Agent with `message/send`, and returns the answer. Now an agent is a client **and** a server.
-
----
-
-## 9. Scope and spec notes
+## 8. Scope and spec notes
 
 - Method and field names follow **A2A spec v0.3** (`message/send`, `tasks/get`, `kind`).
 - To keep the demo short it leaves out streaming (`message/stream` over Server-Sent Events),
